@@ -1,0 +1,20 @@
+# Classification metrics R 
+## This package contains three functions 
+
+This is a link to [GitHub repository](https://github.com/Oichii/ClassificationMetricsR).
+
+```{r}
+library(carData)
+library(caret)
+
+data <- Greene
+
+inTraining <- createDataPartition(data$decision, p = .75, list = FALSE)
+training <- data[ inTraining,]
+testing  <- data[-inTraining,]
+#pred <- classifier(training[ , c("judge", 'location')], training$decision , testing[ , c("judge", 'location')])
+#print(pred)
+
+```
+
+

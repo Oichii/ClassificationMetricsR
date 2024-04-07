@@ -1,3 +1,17 @@
+#' Calculate Accuracy
+#'
+#' @description Function to calculate accuracy based on ground truth and
+#' predicted probability. First threshold is applied and then mean accuracy
+#' across samples is calculated. Function also calculates number of true positive, false positive, true negative and false negative examples.
+#'
+#' @param true_val ground truth values in range {0, 1}
+#' @param pred_val predicted probability in range [0, 1]
+#' @param threshold probability threshold, can be a single value or a vector, default 0.5
+#'
+#' @return mean accuracy
+#' @examples  calculate_accuracy(true_val, pred_val) or calculate_accuracy(true_val, pred_val, threshold)
+#' @export
+
 calculate_accuracy <- function(true_val, pred_val, threshold=0.5){
   stopifnot(is.numeric(true_val))
   stopifnot(is.numeric(pred_val))
