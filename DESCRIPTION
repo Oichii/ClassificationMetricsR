@@ -1,0 +1,11 @@
+Package: ClassificationMetricsR
+Type: Package
+Title: This package predicts binary classification and calculates metrics.
+Version: 0.1.0
+Author: Aleksandra Dzieniszewska
+Maintainer: Aleksandra Dzieniszewska <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
