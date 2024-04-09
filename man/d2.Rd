@@ -20,7 +20,7 @@ Data on cases filed in 1990, in which refugee claimants rejected by the Canadian
 Immigration and Refugee Board asked the Federal Court of Appeal for leave to appeal the negative ruling of the Board.
 }
 \examples{
-barplot(d2$decision, names.arg=d2$judge)
+histogram(d2$decision)
 }
 \keyword{d2}
 \keyword{datasets}

@@ -1,13 +1,13 @@
 library(caret)
 #' Binary classification
 #'
-#' @description function for training model and classificing test data
+#' @description function for training model and classifying test data
 #'
 #' @param training_x input for model training
 #' @param training_y expected output (true value)
 #' @param testing input for model testing
 #' @return classification of testing vector
-#' @examples classifier(X, Y)
+#' @examples classifier(training_x, training_y, testing)
 #' @export
 
 classifier <- function(training_x, training_y, testing){

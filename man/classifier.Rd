@@ -17,8 +17,8 @@ classifier(training_x, training_y, testing)
 classification of testing vector
 }
 \description{
-function for training model and classificing test data
+function for training model and classifying test data
 }
 \examples{
-classifier(X, Y)
+classifier(training_x, training_y, testing)
 }

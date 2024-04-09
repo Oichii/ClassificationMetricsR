@@ -12,6 +12,5 @@
 #'  \item{decision}{Judge's decision. A factor with levels: no, leave to appeal not granted; yes, leave to appeal granted.}
 #' }
 #' @keywords datasets d2
-#' @examples barplot(d2$decision, names.arg=d2$judge)
-#' @export
+#' @examples histogram(d2$decision)
 "d2"

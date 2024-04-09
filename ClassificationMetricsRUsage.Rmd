@@ -24,7 +24,7 @@ library(pROC)
 ## Data
 
 ```{r}
-data <- ClassificationMetricsR::d2
+data <- d2
 knitr::kable (head (data), caption = "Sneak peek into the dataset")
 
 ```
@@ -32,7 +32,7 @@ knitr::kable (head (data), caption = "Sneak peek into the dataset")
 ## classifier usage
 
 ```{r}
-data <- Greene
+
 
 inTraining <- createDataPartition(data$decision, p = .75, list = FALSE)
 training <- data[ inTraining,]
