@@ -13,4 +13,5 @@
 #' }
 #' @keywords datasets d2
 #' @examples barplot(d2$decision, names.arg=d2$judge)
+#' @export
 "d2"

@@ -19,8 +19,5 @@ classifier <- function(training_x, training_y, testing){
   gbmFit1 <- caret::train(training_x, training_y,
                    method = 'glm',
                    trControl = fitControl)
-  print(summary(gbmFit1))
-  gbmFit1
   predictions <- predict (gbmFit1, newdata = testing, type = "prob")
-  print(predictions)
 }

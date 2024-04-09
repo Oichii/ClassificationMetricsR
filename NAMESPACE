@@ -3,3 +3,4 @@
 export(calculate_accuracy)
 export(calculate_precsion_recall)
 export(classifier)
+export(d2)

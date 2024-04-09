@@ -1,0 +1,64 @@
+---
+title: Classification Metrics R package 
+author: Aleksandra Dzieniszewska
+output: html_document
+---
+
+# Introduction
+
+This package contains three functions:
+
+-   classifier
+-   calculate accuracy
+-   calculate precision and recall
+
+```{r, include=FALSE}
+library(carData)
+library(caret)
+library(ClassificationMetricsR)
+library(pROC)
+```
+
+# Usage
+
+## Data
+
+```{r}
+data <- ClassificationMetricsR::d2
+knitr::kable (head (data), caption = "Sneak peek into the dataset")
+
+```
+
+## classifier usage
+
+```{r}
+data <- Greene
+
+inTraining <- createDataPartition(data$decision, p = .75, list = FALSE)
+training <- data[ inTraining,]
+testing  <- data[-inTraining,]
+pred <- classifier(training[ , c("judge", 'location')], training$decision , testing[ , c("judge", 'location')])
+print(pred)
+
+```
+
+## Accuracy, precision and recall calculation
+
+```{r}
+acc <- calculate_accuracy(pred_val = pred[ ,2], as.numeric(testing$decision)-1, 0.5)
+print(acc)
+pr <- calculate_precsion_recall(acc)
+print(pr)
+```
+
+# Optional
+
+## ROC curve plot
+
+```{r}
+
+roc_score=roc(as.numeric(testing$decision)-1, pred[ , 2]) 
+plot(roc_score ,main ="ROC curve")
+```
+
+Package is avaliable at [GitHub repository](https://github.com/Oichii/ClassificationMetricsR).
